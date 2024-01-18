@@ -36,7 +36,8 @@
 :root {
   --color-black: hsl(0, 0%, 0%);
   --color-black-light: hsl(0, 0%, 16%);
-  --color-gray-light: hsl(212, 14%, 58%);
+  --color-gray-dark: hsl(212, 14%, 58%);
+  --color-gray-light: hsl(0, 0%, 91%);
   --color-white: hsl(0, 0%, 100%);
   --color-red: hsl(9, 89%, 65%);
   --color-green: hsl(173, 92%, 25%);
@@ -99,6 +100,11 @@ h3 {
   background-color: var(--color-green);
   font-size: clamp(0.75rem, 1.5vw, 1.125rem);
   box-shadow: 0px 38px 50px 0px rgba(5, 121, 107, 0.2);
+}
+
+.break:before {
+  content: '\A';
+  white-space: pre;
 }
 
 /* ! Header */
@@ -206,7 +212,7 @@ header nav div:last-of-type {
 }
 
 .header-grid > div:first-of-type div div p:last-of-type {
-  color: var(--color-gray-light);
+  color: var(--color-gray-dark);
   font-size: clamp(0.7rem, 1.5vw, 1rem);
   line-height: 160%;
   font-weight: 100;
@@ -283,4 +289,129 @@ header nav div:last-of-type {
   justify-items: center;
   column-gap: 1rem;
   row-gap: 2rem;
+}
+
+/* ! Service Section */
+
+.service-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  background: url(./assets/images/background_1.png) no-repeat center right;
+  background-size: contain;
+  background-size: 60%;
+
+  margin-block-end: 7.5rem;
+}
+
+.service-section > p {
+  margin-block-end: 0.375rem;
+  font-size: clamp(0.625rem, 0.537rem + 0.3756vw, 0.875rem);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.service-section h2 {
+  margin-block-end: 3.5rem;
+  max-width: 50%;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+  width: 80%;
+  gap: 2vw;
+  text-align: left;
+}
+
+.service-grid div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid var(--color-gray-light);
+  background-color: var(--color-white);
+  border-radius: 10px;
+  padding: 4rem 1rem 3rem 3rem;
+}
+
+.service-grid div div {
+  background-color: var(--color-gray-light);
+  padding: 0.2rem;
+  border-radius: 5px;
+  margin-block-end: 1rem;
+}
+
+.service-grid div p:first-of-type {
+  font-size: clamp(0.875rem, 0.743rem + 0.5634vw, 1.25rem);
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  margin-block-end: 0.2rem;
+}
+
+.service-grid div p:last-of-type {
+  font-size: clamp(0.625rem, 0.581rem + 0.1878vw, 0.75rem);
+  color: var(--color-purple-text);
+  letter-spacing: -0.24px;
+  font-weight: 500;
+}
+
+.service-grid > div:last-of-type {
+  background-color: var(--color-green);
+  border: 1px solid var(--color-green);
+}
+
+.service-grid > div:last-of-type p {
+  color: var(--color-white);
+}
+
+.service-grid > div:last-of-type p:nth-of-type(1) {
+  font-size: clamp(1.25rem, 0.9639rem + 1.2207vw, 2.0625rem);
+  margin-bottom: 1.125rem;
+  font-weight: 700;
+}
+
+.service-grid > div:last-of-type p:nth-of-type(2) {
+  font-size: clamp(1.125rem, 0.8609rem + 1.1268vw, 1.875rem);
+  margin-bottom: 1.0625rem;
+  font-weight: 700;
+}
+
+.service-grid > div:last-of-type p:nth-of-type(3) {
+  font-size: clamp(0.5rem, 0.412rem + 0.3756vw, 0.75rem);
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 768px) {
+  .service-section {
+    background-size: contain;
+  }
+
+  .service-grid {
+    width: 80%;
+  }
+
+  .service-section h2 {
+    margin-block-end: 3.5rem;
+    max-width: 60%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .service-section {
+    background: none;
+  }
+
+  .service-grid > div {
+    width: 60%;
+    justify-self: center;
+    padding: 2rem 0.5rem 2rem 2rem;
+  }
+
+  .service-section h2 {
+    margin-block-end: 3.5rem;
+    max-width: 80%;
+  }
 }
