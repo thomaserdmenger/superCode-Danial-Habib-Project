@@ -1,0 +1,54 @@
+@font-face {
+  font-family: Acme;
+  src: url(./assets/fonts/Acme-Regular.ttf);
+}
+
+@font-face {
+  font-family: AnekBa;
+  src: url(./assets/fonts/AnekBangla-VariableFont.ttf);
+}
+
+@font-face {
+  font-family: AnekGu;
+  src: url(./assets/fonts/AnekGujarati-VariableFont.ttf);
+}
+
+@font-face {
+  font-family: B612;
+  src: url(./assets/fonts/B612Mono-Bold.ttf);
+}
+
+@font-face {
+  font-family: Chenla;
+  src: url(./assets/fonts/Chenla-Regular.ttf);
+}
+
+@font-face {
+  font-family: Manrope;
+  src: url(./assets/fonts/Manrope-VariableFont.ttf);
+}
+
+@font-face {
+  font-family: Poppins;
+  src: url(./assets/fonts/Poppins-Medium.ttf);
+}
+
+:root {
+  --color-black: hsl(0, 0%, 0%);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+.wrapper {
+  min-height: 100vw;
+  font-family: Manrope, sans-serif;
+  color: var(--color-black);
+}
