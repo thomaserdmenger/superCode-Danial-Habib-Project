@@ -305,7 +305,6 @@ header nav div:last-of-type {
   flex-direction: column;
   align-items: center;
   text-align: center;
-
   background: url(./assets/images/background_1.png) no-repeat center right;
   background-size: contain;
   background-size: 60%;
@@ -332,6 +331,7 @@ header nav div:last-of-type {
   width: 80%;
   gap: 2vw;
   text-align: left;
+  justify-content: center;
 }
 
 .service-grid div {
@@ -406,15 +406,19 @@ header nav div:last-of-type {
   }
 }
 
-@media only screen and (max-width: 576px) {
-  .service-section {
-    background: none;
+@media only screen and (max-width: 641px) {
+  .service-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 350px));
   }
 
   .service-grid > div {
-    width: 60%;
+    width: 70%;
     justify-self: center;
     padding: 2rem 0.5rem 2rem 2rem;
+  }
+
+  .service-section {
+    background: none;
   }
 
   .service-section h2 {
