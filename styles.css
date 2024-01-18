@@ -87,6 +87,13 @@ h3 {
   font-weight: 400;
 }
 
+h4 {
+  font-size: clamp(1.125rem, 0.993rem + 0.5634vw, 1.5rem);
+  font-weight: 600;
+  letter-spacing: -1.3px;
+  color: var(--color-black-light);
+}
+
 .btn {
   color: var(--color-white);
   background-color: var(--color-red);
@@ -413,5 +420,125 @@ header nav div:last-of-type {
   .service-section h2 {
     margin-block-end: 3.5rem;
     max-width: 80%;
+  }
+}
+
+/* ! Process Section */
+
+.process-section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-block-end: 10rem;
+}
+
+.process-section img {
+  margin-block-end: 0.5rem;
+}
+
+.process-section h2 {
+  margin-block-end: 0.875rem;
+}
+
+.process-section > p {
+  margin-block-end: 2.875rem;
+  color: var(--color-purple-text);
+  font-size: clamp(0.875rem, 0.743rem + 0.5634vw, 1.25rem);
+  line-height: 2em;
+  letter-spacing: -0.4px;
+  max-width: 40%;
+}
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  width: 75%;
+  justify-content: center;
+  position: relative;
+}
+
+.process-grid img {
+  margin-block: 2rem 3rem;
+  outline-offset: 1.5rem;
+  border-radius: 100%;
+}
+
+.process-grid article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.process-grid article:nth-of-type(1) img {
+  background-color: var(--color-white);
+  outline: 1px solid var(--color-green);
+}
+
+.process-grid article:nth-of-type(2) img,
+.process-grid article:nth-of-type(3) img {
+  outline: dashed var(--color-green);
+}
+
+.process-grid article h4 {
+  margin-block-end: 1rem;
+}
+
+.process-grid article p {
+  columns: var(--color-purple-text);
+  font-size: clamp(0.75rem, 0.662rem + 0.3756vw, 1rem);
+  letter-spacing: -0.32px;
+  line-height: 2rem;
+}
+
+.process-vector_1 {
+  position: absolute;
+  width: 15%;
+  top: 70px;
+  left: 25.5%;
+}
+
+.process-vector_2 {
+  position: absolute;
+  width: 15%;
+  top: 70px;
+  left: 60.5%;
+}
+
+.process-number {
+  font-size: 1.125rem;
+  font-weight: 700;
+  background-color: var(--color-gray-light);
+  border-radius: 100%;
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-content: center;
+  position: absolute;
+  top: 0;
+  left: 25%;
+}
+
+@media only screen and (max-width: 1085px) {
+  .process-vector_1,
+  .process-vector_2 {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .process-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    max-width: 50%;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .process-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    max-width: 50%;
   }
 }
