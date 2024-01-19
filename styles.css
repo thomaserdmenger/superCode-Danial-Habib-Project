@@ -434,7 +434,7 @@ header nav div:last-of-type {
   flex-direction: column;
   text-align: center;
   align-items: center;
-  margin-block-end: 10rem;
+  margin-block-end: 6rem;
 }
 
 .process-section img {
