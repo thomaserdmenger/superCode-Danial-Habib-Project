@@ -806,6 +806,14 @@ header nav div:last-of-type {
   .plans-grid {
     max-width: 50%;
   }
+
+  .plans-section > h2 {
+    max-width: 70%;
+  }
+
+  .plans-section > p {
+    max-width: 60%;
+  }
 }
 
 @media only screen and (max-width: 576px) {
