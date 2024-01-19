@@ -540,6 +540,14 @@ header nav div:last-of-type {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     max-width: 50%;
   }
+
+  .process-section h2 {
+    max-width: 90%;
+  }
+
+  .process-section > p {
+    max-width: 70%;
+  }
 }
 
 @media only screen and (max-width: 576px) {
@@ -644,6 +652,13 @@ header nav div:last-of-type {
   color: var(--color-purple-text);
   letter-spacing: -0.4px;
   line-height: 1.8em;
+}
+
+@media only screen and (max-width: 768px) {
+  .for-free-section article {
+    text-align: center;
+    max-width: 90%;
+  }
 }
 
 @media only screen and (max-width: 400px) {
@@ -808,11 +823,11 @@ header nav div:last-of-type {
   }
 
   .plans-section > h2 {
-    max-width: 70%;
+    max-width: 80%;
   }
 
   .plans-section > p {
-    max-width: 60%;
+    max-width: 80%;
   }
 }
 
