@@ -920,3 +920,42 @@ header nav div:last-of-type {
     max-width: 100%;
   }
 }
+
+/* ! Discover Section */
+
+.discover-section {
+  display: grid;
+  place-items: center;
+  text-align: center;
+  margin-block-end: 10rem;
+  background-color: var(--color-green);
+  color: var(--color-white);
+  border-radius: 16px;
+  padding: 8%;
+  width: 80%;
+  margin-inline: auto;
+  position: relative;
+}
+
+.discover-section h2 {
+  max-width: 60%;
+  margin-block-end: 2.5rem;
+  font-size: clamp(1.75rem, 1.4859rem + 1.1268vw, 2.5rem);
+}
+
+.discover-section svg {
+  width: 16%;
+  position: absolute;
+  top: 10%;
+  left: 18%;
+}
+
+@media only screen and (max-width: 768px) {
+  .discover-section h2 {
+    max-width: 90%;
+  }
+
+  .discover-section svg {
+    left: 10%;
+  }
+}
