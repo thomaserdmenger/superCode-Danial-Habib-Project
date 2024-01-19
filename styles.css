@@ -39,10 +39,11 @@
   --color-gray-dark: #8593a3;
   --color-gray-light: #e8e8e8;
   --color-white: #ffffff;
-  --color-red: #f56e56;
-  --color-green: #057a6d;
+  --color-red: hsl(8, 90%, 66%);
+  --color-green: hsl(173, 92%, 25%);
   --color-purple-text: #746f95;
   --color-blue: #3734a9;
+  --transition: 0.5s;
 }
 
 * {
@@ -102,12 +103,22 @@ h4 {
   font-weight: 600;
   padding: 1rem 2.1rem;
   border-radius: 45px;
+  transition: var(--transition);
+}
+
+.btn:hover {
+  background-color: hsla(8, 90%, 75%, 1);
 }
 
 .btn-green {
   background-color: var(--color-green);
   font-size: clamp(0.75rem, 1.5vw, 1.125rem);
   box-shadow: 0px 38px 50px 0px rgba(5, 121, 107, 0.2);
+  transition: var(--transition);
+}
+
+.btn-green:hover {
+  background-color: hsl(173, 92%, 15%);
 }
 
 .break:before {
@@ -602,6 +613,11 @@ header nav div:last-of-type {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+  transition: var(--transition);
+}
+
+.app-section > div a:nth-of-type(2):hover {
+  background-color: hsl(173, 92%, 15%);
 }
 
 .app-section > div a:nth-of-type(2) {
