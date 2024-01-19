@@ -597,14 +597,14 @@ header nav div:last-of-type {
   gap: 0.5rem;
 }
 
-.app-section > div div {
+.app-section > div a {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
 }
 
-.app-section > div div:nth-of-type(2) {
+.app-section > div a:nth-of-type(2) {
   background-color: var(--color-green);
   box-shadow: 0px 38px 50px 0px rgba(5, 121, 107, 0.2);
 }
