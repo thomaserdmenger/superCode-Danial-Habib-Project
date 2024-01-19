@@ -612,3 +612,40 @@ header nav div:last-of-type {
     max-width: 70%;
   }
 }
+
+/* ! For Free Section */
+
+.for-free-section {
+  max-width: 90%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  margin: 0 auto;
+  place-items: center;
+  margin-block-end: 5.25rem;
+  row-gap: 1rem;
+}
+
+.for-free-section article {
+  max-width: 70%;
+  padding: 1.5rem 0;
+}
+
+.for-free-section article h2 {
+  margin-block-end: 2rem;
+}
+
+.for-free-section article p {
+  margin-block-end: 3rem;
+  font-size: clamp(0.875rem, 0.743rem + 0.5634vw, 1.25rem);
+  color: var(--color-purple-text);
+  letter-spacing: -0.4px;
+  line-height: 1.8em;
+}
+
+@media only screen and (max-width: 400px) {
+  .for-free-section {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    max-width: 100%;
+  }
+}
